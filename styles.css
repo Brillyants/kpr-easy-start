@@ -1,0 +1,142 @@
+/* General Styling */
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background: white;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+button {
+  color: white;
+  background-color: #ff0000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 600px) {
+  .no-mob {
+    display: none;
+  }
+}
+
+/* Start Hero Section */
+#hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("./assets/hero-bg.png") no-repeat center center / cover;
+  overflow: hidden;
+}
+
+.parallax-images {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 0;
+}
+
+.parallax-images img {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#hero-content {
+  position: relative;
+  z-index: 10;
+  background: black;
+  color: white;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
+}
+
+#hero-section .row {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Start Video Section */
+#video-section {
+  background-image: url("https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/video_bg_fa66d654c8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.video-content {
+  padding: 100px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#video-section iframe {
+  width: 100%;
+  height: 75vh;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.video-general-title-last {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 803px) and (max-width: 1027px) {
+  .video-general-title-last {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 803px) {
+  .video-general-title-last {
+    margin-bottom: 25px;
+  }
+
+  .video-content {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .video-general-title-last {
+    margin-bottom: 25px;
+  }
+
+  .video-content {
+    padding: 30px 20px;
+  }
+
+  #video-section iframe {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 50vh;
+  }
+}
+
+/* Fitness Checkup */
+
+#fitness-checkup {
+  padding: 50px 30px;
+}
