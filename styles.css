@@ -16,7 +16,8 @@ html {
 }
 
 body {
-  background: white;
+  background-color: white;
+  cursor: url("./assets/electric-guitar.png") 16 16, auto;
 }
 
 p {
@@ -41,6 +42,30 @@ button {
   color: #ED1C24;
 }
 
+.animated-red-text {
+  display: inline-block;
+  background: #111 -webkit-linear-gradient(120deg,
+      transparent 40%,
+      rgba(255, 255, 255) 45%,
+      #ffffff 100%,
+      rgba(255, 255, 255) 55%,
+      transparent 60%) no-repeat 0 0 / 30px 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ED1C24;
+  animation: sweep 2.5s ease-in infinite;
+}
+
+@keyframes sweep {
+  0% {
+    background-position: -100% -100%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 .text-highlight-red {
   background-color: #ED1C24;
   padding: 2px 5px;
@@ -51,6 +76,50 @@ button {
 @media screen and (max-width: 600px) {
   .no-mob {
     display: none;
+  }
+}
+
+/* Entry Animation */
+.curtain {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: 9999;
+  animation: openCurtain 2.5s ease-in-out forwards;
+}
+
+#curtain-left {
+  left: 0;
+  background-image: url('./assets/curtain-left.png');
+  transform-origin: left;
+}
+
+#curtain-right {
+  right: 0;
+  background-image: url('./assets/curtain-right.png');
+  transform-origin: right;
+}
+
+@keyframes openCurtain {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes openCurtain {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
   }
 }
 
@@ -117,6 +186,24 @@ button {
   z-index: 3;
 }
 
+#beli-tiket-sekarang-btn {
+  animation: upDown 1.5s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Start Video Section */
 #video-section {
   text-align: center;
@@ -148,6 +235,7 @@ button {
   background-color: #ececec;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(129, 129, 129, 0.1), 0 6px 6px rgba(70, 70, 70, 0.08);
 }
 
 @media (min-width: 803px) and (max-width: 1027px) {
