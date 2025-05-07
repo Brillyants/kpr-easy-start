@@ -125,26 +125,41 @@ button {
 
 /* Start Hero Section */
 #hero-section {
-  height: 100vh;
-  overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background: url("./assets/hero-bg.png") no-repeat center center / cover;
   z-index: 11;
 }
 
-#logo-ocbc-hero {
-  width: 100px;
-  height: 27px;
-}
-
-#hero-section.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 #hero-section .container {
-  max-width: 800px;
+  max-width: 1100px;
+}
+
+@media (min-width: 1150px) and (max-width: 1400px) {
+  #hero-section .container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1150px) {
+  #hero-section .container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  #hero-section .container {
+    max-width: 600px;
+    padding: 100px 20px;
+  }
+}
+
+#logo-ocbc-hero {
+  width: 150px;
+  height: 40px;
 }
 
 #hero-section h1 {
@@ -153,9 +168,12 @@ button {
 
 .parallax-images {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  pointer-events: none;
   overflow: hidden;
   z-index: 0;
 }
@@ -175,7 +193,7 @@ button {
   padding: 50px 20px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
-  max-width: 350px;
+  max-width: 400px;
 }
 
 #sal-priadi {
@@ -221,7 +239,7 @@ button {
 
 #video-section iframe {
   width: 100%;
-  height: 75vh;
+  height: 70vh;
   border-radius: 15px;
   margin-bottom: 40px;
 }

@@ -18,3 +18,17 @@ window.addEventListener("scroll", () => {
   vynil3.style.transform = `translateX(${value * 0.25}px)`;
   vynil4.style.transform = `translateY(${value * 0.25}px)`;
 });
+
+function adjustSectionHeight() {
+  const heroImage = document.querySelector("#bg-behind-img");
+  const heroSection = document.querySelector("#hero-section");
+
+  if (heroImage) {
+    const imageHeight = heroImage.height;
+
+    heroSection.style.height = `${imageHeight - 100}px`;
+  }
+}
+
+window.addEventListener("load", adjustSectionHeight);
+window.addEventListener("resize", adjustSectionHeight);
