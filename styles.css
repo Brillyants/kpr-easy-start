@@ -130,8 +130,18 @@ button {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url("./assets/hero-bg.png") no-repeat center center / cover;
+  background-color: #A60002;
   z-index: 11;
+}
+
+#hero-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #700002, transparent);
+  z-index: 15;
 }
 
 #hero-section .container {
@@ -233,7 +243,7 @@ button {
   text-align: center;
   color: #3f3f3f;
   background-color: #EBEFF1;
-  padding: 50px 30px;
+  padding: 50px 30px 25px 30px;
 }
 
 .video-content {
@@ -319,14 +329,14 @@ button {
 }
 
 .parallax-section {
-  padding: 100px 0 100px 0;
+  padding-bottom: 50px;
   background-color: #ebeff1;
 }
 
 .parallax-heading {
   text-align: center;
   padding: 0 30px 80px 30px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   max-width: 1000px;
 }
 
