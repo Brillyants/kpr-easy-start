@@ -297,7 +297,7 @@ button {
 
 /* Ruang Menyala */
 #ruang-menyala {
-  padding: 50px 30px;
+  padding: 50px 30px 0 50px;
 }
 
 .card-text {
