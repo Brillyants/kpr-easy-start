@@ -226,9 +226,6 @@ button {
 #video-section {
   text-align: center;
   color: #3f3f3f;
-  background: url("./assets/stars.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .video-content {
@@ -290,9 +287,208 @@ button {
 }
 
 /* Fitness Checkup */
-
 #fitness-checkup {
-  padding: 50px 30px;
+  padding: 25px 30px;
+}
+
+/* Ruang Menyala */
+#ruang-menyala {
+  padding: 25px 30px;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #888;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
+
+/* Buka Nyala */
+#buka-nyala {
+  padding: 25px 30px;
+}
+
+.parallax-section {
+  padding: 100px 0 100px 0;
+  background-color: #ebeff1;
+}
+
+.parallax-heading {
+  text-align: center;
+  padding: 0 30px 80px 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.parallax-heading .general-subtitle {
+  margin-bottom: 10px;
+}
+
+.parallax-heading p {
+  font-weight: 500;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.content-mobile {
+  display: none;
+}
+
+.parallax-1 {
+  background-image: url("https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/yang_paham_796697afa6.png");
+}
+
+.parallax-2 {
+  background-image: url("https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/yang_pintar_45b874fd08.png");
+}
+
+.parallax-3 {
+  background-image: url("https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/yang_aman_cf52516306.png");
+}
+
+.parallax-4 {
+  background-image: url("https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/yang_aman_cf52516306.png");
+}
+
+.parallax-1,
+.parallax-3 {
+  background-position: 75% 100%;
+}
+
+.parallax-2,
+.parallax-4 {
+  background-position: 25% 80%;
+}
+
+.parallax-1,
+.parallax-2,
+.parallax-3,
+.parallax-4 {
+  height: 90vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 30%;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 50px 40px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-1 {
+  background-color: #d32f2f;
+}
+
+.content-2 {
+  background-color: #3a61a6;
+}
+
+.content-3 {
+  background-color: rgb(240, 70, 192);
+}
+
+.content-4 {
+  background-color: rgb(248, 217, 37);
+}
+
+.content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+  .content {
+    width: 90%;
+  }
+
+  .parallax-1,
+  .parallax-3 {
+    background-size: 30%;
+    background-position: 85% 80%;
+  }
+
+  .parallax-2,
+  .parallax-4 {
+    background-size: 30%;
+    background-position: 25% 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+
+  .parallax-section {
+    padding: 100px 0;
+    background-color: #ebeff1;
+  }
+
+  .parallax-1,
+  .parallax-2,
+  .parallax-3 {
+    height: 100%;
+    margin-bottom: 30px;
+  }
+
+  .content-empty {
+    display: none;
+  }
+
+  .content-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .content-mobile img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .parallax-1,
+  .parallax-2,
+  .parallax-3,
+  .parallax-4 {
+    background-image: none;
+  }
 }
 
 /* Start Site Footer Section */
@@ -335,6 +531,7 @@ button {
 
 /* Start Floating CTA */
 #floating-cta {
+  height: 80px;
   background-color: white;
   position: fixed;
   left: 0;
@@ -400,6 +597,14 @@ button {
 @media screen and (max-width: 735px) {
   #floating-cta-text {
     text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  #floating-cta-btn {
+    font-size: 12px;
   }
 }
 
