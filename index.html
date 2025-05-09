@@ -61,10 +61,8 @@
       </h2>
       <iframe src="https://www.youtube.com/embed/AaTAnOlbeOA" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="video-text-content">
-        <h5>Setiap nada dan cerita bisa jadi pengingat bahwa mimpi layak diperjuangkan <span
-            class="text-danger"><b>#Funanciallyfit</b></span></h5>
-      </div>
+      <h4>Setiap nada dan cerita bisa jadi pengingat bahwa mimpi layak diperjuangkan <span
+          class="text-danger"><b>#Funanciallyfit</b></span></h4>
     </div>
   </section>
   <section id="ruang-menyala">
@@ -91,7 +89,7 @@
                     src="https://api.ruangmenyala.com/api/uploads/on-c2-s3-ruangmenyala-prod/44eeebc6-03fd-4fec-bd0a-4be80d4527ef/membelirumahpertama.jpg"
                     class="card-img-top" alt="Slide 1" />
                   <div class="card-body">
-                    <h5 class="card-title">Membeli Rumah Pertama</h5>
+                    <h5 class="card-title">Rumah Pertama</h5>
                     <p class="card-text">Panduan lengkap untuk membeli rumah pertamamu dengan aman dan bijak.</p>
                     <button class="btn btn-primary">Lebih Lanjut</button>
                   </div>
@@ -154,14 +152,8 @@
   </section>
   <section class="parallax-section">
     <div class="parallax-heading">
-      <p class="general-subtitle text-grey">
-        Young Nyala OCBC membantu orang tua dan anak di bawah usia 17 tahun<br />
-        agar mengerti cara menabung hingga mengelola keuangan untuk
-      </p>
-      <h2 class="general-title">
-        <span class="text-red">jadi <span class="text-highlight-white">#FUNanciallyFIT</span> dan
-          buat mereka jadi anak:
-        </span>
+      <h2>Tonton video music berikut ini dari <span class="text-highlight-red">Sal Priadi dan Yandy
+          Laurens</span> untuk menyulut semangatmu wujudkan rumah Impian!</h2>
       </h2>
     </div>
     <div class="parallax-1">
@@ -214,6 +206,7 @@
         <div class="content-mobile">
           <img alt="" src="https://on-c2-cmshub-public.s3.ap-southeast-3.amazonaws.com/yang_aman_cf52516306.png" />
         </div>
+        <div class="content content-empty">&nbsp;</div>
         <div class="content content-4">
           <h2>Yang Aman</h2>
           <p>
@@ -221,19 +214,59 @@
             atur limit transaksi harian anak hingga Rp2 juta
           </p>
         </div>
-        <div class="content content-empty">&nbsp;</div>
       </div>
     </div>
   </section>
   <section id="kpr">
-    <div class="container">
-      <div class="row">
+    <div class="container text-center" id="kpr-main">
+      <h2>Tonton video music berikut ini dari <span class="text-highlight-red">Sal Priadi dan Yandy
+          Laurens</span> untuk menyulut semangatmu wujudkan rumah Impian!</h2>
+      <p>Klik gambar di bawah ini buat cari tahu promo KPR Easy Start!</p>
+      <br>
+      <div class="row justify-content-center align-items-center">
         <div class="col">
-          <img src="" alt="">
+          <div class="kpr-item-wrapper">
+            <div class="kpr-item" data-id="1">
+              <img src="./assets/kpr-1.png" alt="" class="kpr-icon">
+              <h5>KPR Easy Start OCBC Jodohnya Rumah Pertamamu</h5>
+            </div>
+          </div>
         </div>
-        <div class="col"></div>
-        <div class="col"></div>
+        <div class="col">
+          <div class="kpr-item-wrapper-bigger">
+            <div class="kpr-item" data-id="2">
+              <img src="./assets/kpr-2.png" alt="" class="kpr-icon">
+              <h5>Cicilan Ringan Mulai Rp3 Jutaan!</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="kpr-item-wrapper">
+            <div class="kpr-item" data-id="3">
+              <img src="./assets/kpr-3.png" alt="" class="kpr-icon">
+              <h5>Cicil Memorimu Cicil Rumah Kecilmu Dengan KPR iB OCBC Syariah Fixed Tenor hingga 15 Tahun</h5>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="kpr-detail d-none" id="detail-1">
+      <h3>Detail 1: KPR Easy Start</h3>
+      <p>Informasi lengkap tentang KPR Easy Start OCBC.</p>
+      <button class="btn btn-secondary back-btn">Kembali</button>
+    </div>
+
+    <div class="kpr-detail d-none" id="detail-2">
+      <h3>Detail 2: Cicilan Ringan</h3>
+      <p>Informasi lengkap tentang cicilan ringan mulai Rp3 Jutaan.</p>
+      <button class="btn btn-secondary back-btn">Kembali</button>
+    </div>
+
+    <div class="kpr-detail d-none" id="detail-3">
+      <h3>Detail 3: KPR iB OCBC Syariah</h3>
+      <p>Informasi lengkap tentang KPR iB OCBC Syariah dengan tenor tetap hingga 15 tahun.</p>
+      <button class="btn btn-secondary back-btn">Kembali</button>
     </div>
   </section>
   <section class="site-footer-section">
@@ -288,6 +321,46 @@
       },
     });
   </script>
+  <script>
+    const kprMain = document.getElementById('kpr-main');
+    const detailViews = document.querySelectorAll('.kpr-detail');
+
+    document.querySelectorAll('.kpr-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const id = item.getAttribute('data-id');
+
+        // Fade out main
+        kprMain.classList.add('kpr-hidden');
+        setTimeout(() => {
+          kprMain.classList.add('d-none');
+
+          const detail = document.getElementById(`detail-${id}`);
+          detail.classList.remove('d-none');
+          detail.classList.add('fade-transition');
+          requestAnimationFrame(() => {
+            detail.classList.add('fade-show');
+          });
+        }, 300);
+      });
+    });
+
+    document.querySelectorAll('.back-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        detailViews.forEach(detail => {
+          detail.classList.remove('fade-show');
+          setTimeout(() => {
+            detail.classList.add('d-none');
+          }, 500);
+        });
+
+        kprMain.classList.remove('d-none');
+        setTimeout(() => {
+          kprMain.classList.remove('kpr-hidden');
+        }, 50);
+      });
+    });
+  </script>
+
 </body>
 
 </html>
