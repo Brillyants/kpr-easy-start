@@ -44,14 +44,12 @@ button {
 
 .animated-red-text {
   display: inline-block;
-  background: #111 -webkit-linear-gradient(
-      120deg,
+  background: #111 -webkit-linear-gradient(120deg,
       transparent 40%,
       rgba(255, 255, 255) 45%,
       #ffffff 100%,
       rgba(255, 255, 255) 55%,
-      transparent 60%
-    ) no-repeat 0 0 / 30px 100%;
+      transparent 60%) no-repeat 0 0 / 30px 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ed1c24;
@@ -301,6 +299,7 @@ button {
 .site-footer-section {
   padding: 20px;
   background-color: #d32f2f;
+  margin-bottom: 80px;
 }
 
 .site-footer-grid {
