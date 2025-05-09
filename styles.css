@@ -520,20 +520,6 @@ button {
   min-height: 325px;
 }
 
-.kpr-item-wrapper-bigger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: #9C4E2B;
-  color: white;
-  border-radius: 15px;
-  padding: 30px;
-  min-height: 350px;
-}
-
-
 .kpr-icon {
   width: 150px;
   height: 150px;
@@ -579,7 +565,7 @@ button {
 /* Start Site Footer Section */
 .site-footer-section {
   padding: 20px;
-  background-color: #d32f2f;
+  background-color: #db1515;
   margin-bottom: 80px;
 }
 
