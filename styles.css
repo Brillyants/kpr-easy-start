@@ -513,11 +513,19 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #A60002;
+  background: #880104;
   color: white;
   border-radius: 15px;
   padding: 30px;
   min-height: 325px;
+}
+
+.kpr-brown-bg {
+  background-color: #9C4E2B;
+}
+
+.kpr-light-brown-bg {
+  background-color: #D1C0AB;
 }
 
 .kpr-icon {
